@@ -1,0 +1,289 @@
+@charset "utf-8";
+
+*{margin: 0;padding: 0;box-sizing: border-box;}
+ul,li,ol{list-style: none;}
+a{text-decoration: none;color: inherit;}
+body{
+    background: #fff;
+    color: #333;
+    font-size: 14px;
+    font-family: "돋움";
+}
+
+.wrap{
+    width: 1000px;
+    display: flex;
+}
+
+.left{
+    width: 200px;
+    height: 650px;
+    /* background-color: red; */
+}
+
+.logo{
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 5px double rgb(0, 197, 0);
+}
+
+.nav{
+    padding-top: 20px;
+}
+
+.main{
+    width: 130px;
+    margin: 0 auto;
+}
+
+.main > li{
+    position: relative;
+    margin-bottom: 5px;
+}
+
+.main > li >a{
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: rgb(0, 197, 0);
+    color: white;
+    font-weight: bold;
+    border-radius: 10px 0 0 10px;
+    transition: all 0.3s;
+}
+
+.main > li:hover >a{
+    background-color: green;
+    color: white;
+}
+
+.sub{
+    position: absolute;
+    height: 200px;
+    width: 150px;
+    left: 130px;
+    top: -20px;
+    z-index: 50;
+    background-color: rgb(232, 255, 198);
+    color: green;
+    display: none;
+}
+
+.sub li{}
+
+.sub li a{
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    font-weight: 900;
+}
+
+.sub li:hover a{
+    background-color: green;
+    color: white;
+}
+
+.right{
+    /* background-color: greenyellow; */
+    width: 800px;
+}
+
+.img_slide{
+    height: 350px;
+    position: relative;
+    overflow: hidden;
+}
+
+.left_move{
+    width: calc(800px * 3);
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 350px;
+}
+
+.left_move li{
+    float: left;
+    width: 800px;
+    height: 350px;
+}
+
+.contents{
+    height: 200px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contents > div{
+    width: 33%;
+    height: 200px;
+    
+}
+
+.contents h2{
+    font-size: 14px;
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background-color: green;
+    color: white;
+    border-radius: 10px 10px 0 0;
+}
+
+.contents ul{
+    background-color: rgb(232, 255, 198);
+    width: 100%;
+    height: 170px;
+    border-top: 5px solid green;
+    padding: 5px;
+}
+
+.notice{}
+
+.notice ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.notice ul li{
+    display: flex;
+    justify-content: space-between;
+}
+
+.notice ul li a{
+    width: 70%;
+    text-wrap: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.notice ul li span{
+    width: 25%;
+    text-wrap: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.gallery{}
+
+.gallery ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.gallery ul li{
+    width: 32%;
+}
+
+.gallery ul li img{
+    width: 100%;
+    transition: all 0.3s;
+}
+
+.gallery ul li img:hover{
+    opacity: 0.5;
+}
+
+.banner{
+    border: 5px solid green;
+    padding: 5px;
+    height: 200px;
+}
+
+.banner p{height: 100%;}
+
+.banner p a{
+    display: block;
+    height: 100%;
+    text-align: center;
+}
+
+.banner p a img{
+    height: 100%;
+    filter: grayscale(100%);
+    transition: all 0.5s;
+}
+.banner p a img:hover{
+    filter: none;
+}
+
+.footer{
+    height: 100px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid green;
+}
+
+.f_logo{
+    width: 200px;
+}
+
+.f_right{
+    width: 600px;
+    height: 100%;
+    font-size: 12px;
+    color: green;
+}
+
+.f_menu{
+    height: 50%;
+    text-align: center;
+    line-height: 50px;
+}
+
+.f_menu a{
+    padding: 0 5px;
+}
+
+.copy{
+    height: 50%;
+    text-align: center;
+    line-height: 50px;
+    border-top: 1px dotted green;
+}
+
+.popup{
+    width: 450px;
+    height: 400px;
+    background-color: rgb(232, 255, 198);
+    border: 5px double green;
+    padding: 20px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.popup h3{
+    text-align: center;
+    padding-bottom: 20px;
+    /* border-bottom: 5px dotted green; */
+    font-size: 50px;
+    color: green;
+}
+
+.popup p{
+    padding-top: 20px;
+    text-align: justify;
+    line-height: 2;
+    border: 5px dotted green;
+    padding: 10px;
+}
+
+.popup .close{
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    padding: 5px 10px;
+    cursor: pointer;
+    background-color: green;
+    color: white;
+    border: none;
+    box-shadow: 1px 1px 1px rgb(119, 255, 125);
+}
